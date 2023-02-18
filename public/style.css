@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    padding: 20px;
+}
+
+.header--image {
+    height: 100%;
+    margin-right: 6px;
+}
+
+.header--title {
+    font-size: 1.25rem;
+}
+
+.header--project {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 4em;
+    width: 50%;
+}
+
+.inputs {
+    display: flex;
+    gap: 2em;
+}
+
+.inputs > * {
+    border-radius: 0.3em;
+    border-style: solid;
+    border-color: rgb(165, 164, 164);
+    border-width: 0.1em;
+    width: 20em;
+    height: 2.5em;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 75%;
+    height: 3em;
+    border-radius: 0.4em;
+    border-style: none;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    font-weight: bold;
+}
+
+button > img {
+    height: 2em;    
+}
