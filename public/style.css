@@ -77,3 +77,8 @@ button {
 button > img {
     height: 2em;    
 }
+
+.meme-img {
+    width: 30em;
+    height: 30em;
+}
