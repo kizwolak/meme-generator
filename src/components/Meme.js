@@ -10,6 +10,17 @@ export default function Meme() {
     });
     const [allMemesData, setAllMemesData] = useState(memesData.data.memes);
     
+    function handleChange(event) {
+        const {name, value, checked, type} = event.target;
+        console.log(meme);
+        setMeme(prevData => {
+            return {
+                ...prevData,
+                [name]: type === 'checkbox' ? checked : value
+            }
+        })
+    }
+
     function getRandomImage(memes) {
         const random = allMemesData[Math.floor(Math.random()*memes.length)]
         setMeme(prevMeme => {
@@ -22,11 +33,15 @@ export default function Meme() {
     return (
         <div className="form">
             <div className="inputs">
-                <input type='text'></input>
-                <input type='text'></input>
+                <input type='text' onChange={handleChange} name='topText' value={meme.topText}></input>
+                <input type='text' onChange={handleChange} name='bottomText' value={meme.bottomText}></input>
             </div>
             <button className="new-image" onClick={() => getRandomImage(allMemesData)}>Get a new meme image <img src="./images/icons8-picture.svg" alt="icon"/></button>
+            <div className="meme">
             <img src={meme.randomImage} className='meme-img' alt="meme placeholder"/>
+            <h2 className="meme--text top">{meme.topText}</h2>
+            <h2 className="meme--text bottom">{meme.bottomText}</h2>
+            </div>
         </div>
     )
 }
